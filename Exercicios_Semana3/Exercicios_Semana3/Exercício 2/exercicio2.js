@@ -17,4 +17,4 @@ function elementosQuantidadeLista(lista = []){
 
 lista = ["teste1", "teste2", "teste3", "teste4"];
 
-console.log(elementosQuantidadeLista(lista));
+document.write(elementosQuantidadeLista(lista));
