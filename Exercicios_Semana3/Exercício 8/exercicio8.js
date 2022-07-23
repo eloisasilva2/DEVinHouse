@@ -1,39 +1,60 @@
-//8 - Crie um site com os seguintes requisitos:
+/* 8 - Crie um site com os seguintes requisitos:
 
-// um campo de texto (input) onde o usuário irá digitar uma mensagem
+um campo de texto (input) onde o usuário irá digitar uma mensagem
 
-// três botões:
+três botões:
 
-// um botão “adicionar”, que no momento do clique insira a mensagem na tela
+um botão “adicionar”, que no momento do clique insira a mensagem na tela
 
-// um botão “salvar mensagem”, que no momento do clique salve as informações no localStorage
-// opcional: se o texto estiver vazio (length), deve mostrar uma mensagem ao usuário solicitando a inserção de algum texto.
+um botão “salvar mensagem”, que no momento do clique salve as informações no localStorage
+opcional: se o texto estiver vazio (length), deve mostrar uma mensagem ao usuário solicitando a inserção de algum texto.
 
-// um botão “mostrar mensagem”, que após o recarregamento da página, no momento do clique busque a mensagem no localStorage e exiba na tela
-// opcional: se não houver mensagem cadastrada no localStorage, deve mostrará na tela: “não há ítens salvos”
+um botão “mostrar mensagem”, que após o recarregamento da página, no momento do clique busque a mensagem no localStorage e exiba na tela
+opcional: se não houver mensagem cadastrada no localStorage, deve mostrará na tela: “não há ítens salvos”
+ */
 
 
-var numeros = [];
-let pares = [];
-let impares = [];
-function quantidadeParImpar(numeros) {
-    
-    for (i = 0; i < numeros.length; i++) {
-        if (numeros[i] % 2 == 0) {
-            pares.push(numeros[i]);
-            console.log(pares);
-        } else {
-            impares.push(numeros[i]);
-        }
-    }
+function adicionarMensagem() {
+
+    let mensagemDigitada = document.getElementById("mensagemDigitada");
+    let valorDigitado = mensagemDigitada.value;
+
+    let mensagem = document.createElement("p");
+    mensagem.innerText = valorDigitado;
+
+    let mensagemAdicionada = document.getElementById("mensagemAdicionada");
+    mensagemAdicionada.appendChild(mensagem);
 
 }
 
-//exemplo de array
-numeros = [1, 2, 4, 9, 12, 15, 16, 25, 30, 31, 38, 40, 45];
-quantidadeParImpar(numeros);
+function salvarMensagem() {
 
-document.write("<h3> A quantidade informada foi " + numeros.length + ", a de valores pares foi " + pares.length + ", e a de valores ímpares foi " + impares.length + ".</h3>");
+    let mensagem = document.getElementById("mensagemDigitada");
+    let valorDigitado = mensagem.value;
+
+    if (valorDigitado == "") {
+        alert("Nenhuma mensagem foi adicionada, por favor digite o texto.")
+    } else {
+        localStorage.setItem("mensagem", valorDigitado)
+    }
+}
+
+
+function mostrarMensagem() {
+
+    let mensagemSalva = localStorage.getItem('mensagem');
+
+    if (mensagemSalva == null) {
+        alert("Não há ítens salvos.")
+    } else {
+        let mensagem = document.createElement("p");
+        mensagem.innerText = mensagemSalva;
+
+        let mostrarMensagem = document.getElementById("mostrarMensagem");
+        mostrarMensagem.appendChild(mensagem);
+    }
+}
+
 
 
 
