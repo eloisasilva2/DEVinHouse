@@ -4,14 +4,14 @@
 
 function listaBrinquedos() {
 
-let brinquedoDigitado = document.getElementById("brinquedoDigitado");
-let valorDigitado = brinquedoDigitado.value;
+    let brinquedoDigitado = document.getElementById("brinquedoDigitado");
+    let valorDigitado = brinquedoDigitado.value;
 
-let brinquedo = document.createElement("li");
-brinquedo.innerText = valorDigitado;
+    let brinquedo = document.createElement("li");
+    brinquedo.innerText = valorDigitado;
 
-let listaBrinquedos = document.getElementById("listaBrinquedos");
-listaBrinquedos.appendChild(brinquedo);
+    let listaBrinquedos = document.getElementById("listaBrinquedos");
+    listaBrinquedos.appendChild(brinquedo);
 
 }
 
