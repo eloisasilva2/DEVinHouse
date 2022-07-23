@@ -2,12 +2,15 @@
 
 
 
-let filme = {
-    nome: "Jojo Rabbit",
-    anoDeLancamento: 2020,
-    diretor: "Taika Waititi"
+class filme {
+    nome = "Jojo Rabbit";
+    anoDeLancamento = 2020;
+    diretor = "Taika Waititi";
   }
-  
-  console.log(filme.nome);
-  console.log(filme.anoDeLancamento);
-  console.log(filme.diretor);
+
+
+  let dadosFilme = new filme();
+ 
+  console.log(dadosFilme.nome);
+  console.log(dadosFilme.anoDeLancamento);
+  console.log(dadosFilme.diretor);

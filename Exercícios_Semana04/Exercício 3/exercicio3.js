@@ -2,12 +2,33 @@
 
 
 
-let filme = {
-    nome: "Jojo Rabbit",
-    anoDeLancamento: 2020,
-    diretor: "Taika Waititi"
+class Pessoa {
+  nome;
+  idade;
+  cpf;
+  anoAniversario;
+
+  constructor(nome, idade, cpf, anoAniversario) {
+    this.nome = nome;
+    this.idade = idade;
+    this.cpf = cpf;
+    this.anoAniversario = anoAniversario;
   }
-  
-  console.log(filme.nome);
-  console.log(filme.anoDeLancamento);
-  console.log(filme.diretor);
+
+  podeDirigir() {
+    if (this.idade >= 18) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+const dadosPessoa = new Pessoa("Maria", 17, "123456789-22", 2002);
+console.log(dadosPessoa);
+const retorno = dadosPessoa.podeDirigir();
+console.log(retorno);
+
+
+
+
