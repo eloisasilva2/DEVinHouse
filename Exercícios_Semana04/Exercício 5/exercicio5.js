@@ -6,13 +6,18 @@ Após fazer a junção remova os itens que se repetem usando o .includes ou o .f
 Após isso ordene por ordem crescente. */
 
 
+let array1 = [1, 3, 4, 5, 3, 7];
+let array2 = [1, 2, 6, 4, 8, 5];
 
-let filme = {
-    nome: "Jojo Rabbit",
-    anoDeLancamento: 2020,
-    diretor: "Taika Waititi"
-  }
-  
-  console.log(filme.nome);
-  console.log(filme.anoDeLancamento);
-  console.log(filme.diretor);
+let arrayConcatenado = (array1.concat(array2))
+console.log(arrayConcatenado);
+
+arrayCompleto = arrayConcatenado.filter(function (item, pos) {
+  return arrayConcatenado.indexOf(item) == pos;
+})
+
+arrayCompleto.sort(function (a, b) {
+  return a - b;
+});
+
+console.log(arrayCompleto);

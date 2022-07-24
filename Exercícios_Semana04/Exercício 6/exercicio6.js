@@ -13,12 +13,19 @@ _Dica: Dar uma olhada no método filter */
 
 
 
-let filme = {
-    nome: "Jojo Rabbit",
-    anoDeLancamento: 2020,
-    diretor: "Taika Waititi"
-  }
-  
-  console.log(filme.nome);
-  console.log(filme.anoDeLancamento);
-  console.log(filme.diretor);
+let cidades = [
+    { nome: 'Patos de Minas', populacao: 153585 },
+    { nome: 'Lages', populacao: 157349 },
+    { nome: 'Ibiúna', populacao: 79479 },
+    { nome: 'Maringá', populacao: 403063 },
+    { nome: 'Curitiba', populacao: 1963726 },
+    { nome: 'Florianópolis', populacao: 508826 },
+    { nome: 'Pato Branco', populacao: 84779 },
+];
+
+cidadesGrandes = cidades.filter(function (item) {
+
+    return item.populacao > 200000;
+})
+
+console.log(cidadesGrandes);

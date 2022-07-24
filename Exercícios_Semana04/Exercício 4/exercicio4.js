@@ -3,12 +3,28 @@
 // Pode conferir no console.log() como está o array após a exclusão.
 
 
-let filme = {
-    nome: "Jojo Rabbit",
-    anoDeLancamento: 2020,
-    diretor: "Taika Waititi"
-  }
-  
-  console.log(filme.nome);
-  console.log(filme.anoDeLancamento);
-  console.log(filme.diretor);
+let produtos = ["Celular", "Notebook", "Smart TV", "Impressora", "Câmera", "Tablet", "Vídeo Game"];
+
+
+let button = document.getElementById("button");
+
+button.addEventListener("click", function () {
+  let produtoexcluido = document.getElementById("produtoexcluido").value;
+
+  excluirProduto(produtoexcluido);
+
+});
+
+function excluirProduto(produtoexcluido){
+let indice = produtos.indexOf(produtoexcluido);
+if (indice != -1) {
+  produtos.splice(indice, 1);
+} else{
+  alert("Digite um produto da lista.")
+}
+
+console.log(produtos);
+
+}
+
+
