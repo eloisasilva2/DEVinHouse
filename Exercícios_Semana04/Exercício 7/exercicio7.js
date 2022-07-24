@@ -44,35 +44,11 @@ let alunosRecuperacao = arrayAlunos.filter(function (item) {
     return item.media < 7;
 })
 
-if(alunosRecuperacao == ""){
-    document.write("Parabéns a todos da turma.")
-} else{
-    mostrarLista = alunosRecuperacao[i];
-    document.write(mostrarLista)
-    // mostrarNaTela(alunosRecuperacao);
+if (alunosRecuperacao == "") {
+    document.write("<h4>Parabéns a todos da turma.</h4>")
+} else {
+    document.write("<h4>Alunos que ficaram de recuperação:</h4>")
+    alunosRecuperacao.forEach(function (aluno) {
+        document.write("<li>Nome: " + aluno.nome + " - Média: " + aluno.media + "</li>");
+    });
 }
-
-
-// function  mostrarNaTela(alunosRecuperacao){
-//     let listaAlunos = document.getElementById('lista');
-//     for (aluno of alunosRecuperacao) {
-//         // alunos = alunosRecuperacao[i];
-//         let itemAlunos = document.createElement('li');
-//         itemAlunos.innerText = alunos;
-//         listaAlunos.appendChild(itemAlunos);
-    
-// }
-// }
-console.log(alunosRecuperacao);
-
-
-// function repetirFrases(listaFrases) {
-//     var divTexto = document.getElementById("texto");
-//     for (frase of listaFrases) {
-//       const texto = document.createElement("texto");
-//       texto.innerText = frase;
-//       divTexto.appendChild(texto);
-//     }
-//   }
-  
-//   repetirFrases(frases);
