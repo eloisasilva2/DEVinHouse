@@ -19,59 +19,33 @@ class Serie {
   }
 }
 
-let serieMaisAntiga, anoSerieMaisAntiga
-contador = 0;
-while (contador < 4) {
-  let nome = window.prompt("Digite o nome da série:");
-  let anoLancamento = parseInt(window.prompt("Qual o ano de lançamento?"));
-  let qttTemporada = parseInt(window.prompt("Qual o quantidade de temporadas?"));
+for (let i = 0; i < 4; i++) {
+  let nome = prompt("Digite o nome da série:");
+  let anoLancamento = parseInt(prompt("Digite o ano de lançamento da série:"));
+  let qttTemporada = parseInt(prompt("Digite a quantidade de temporadas da série:"));
 
-  let series = new Serie(nome, anoLancamento, qttTemporada);
-
-  contador++;
-  serieMaisAntiga = series.anoLancamento.sort(function (a, b) {
-    return a - b;
-  });
-  console.log(series);
-
-  // if (contador == 0) { // Na primeira rodada o valor do primeiro lançamento é inserido
-  //   anoSerieMaisAntiga = series.anoLancamento;
-  //   serieMaisAntiga = series.nome;
-  // } else if (series.anoLancamento < anoSerieMaisAntiga) {
-  //   anoSerieMaisAntiga = series.anoLancamento;
-  //   serieMaisAntiga = series.nome;
-  // }
+  const serie = new Serie(nome, anoLancamento, qttTemporada);
+  if (i == 0) {
+    anoMaisAntiga = serie.anoLancamento;
+    nomeAntigo = serie.nome;
+  } else {
+    if (serie.anoLancamento < anoMaisAntiga) {
+      anoMaisAntiga = serie.anoLancamento;
+      nomeAntigo = serie.nome;
+    }
+  }
 }
-let tagH1 = document.getElementById("h1");
 
-tagH1.innerHTML += serieMaisAntiga;
-console.log(serieMaisAntiga)
-
-
-// let min = Math.min(...series.anoLancamento);
-// console.log(min);
-
-// serieMaisAntiga.forEach(function (serie) {
-//   document.write("<li>Série mais antiga: " + serie.nome + " - Ano de Lançamento: " + serie.anoLancamento + "</li>");
-// });
+let tagH2 = document.getElementById("h2");
+tagH2.innerHTML += nomeAntigo;
 
 
 
 
-/* cidadesGrandes = series.filter(function (dado) {
+var maior = Number.NEGATIVE_INFINITY,
+  menor = Infinity;
 
-  return dado.populacao > 200000;
-
-
-  let alunosRecuperacao = arrayAlunos.filter(function (item) {
-    return item.media < 7;
-})
-
-if (alunosRecuperacao == "") {
-    document.write("<h4>Parabéns a todos da turma.</h4>")
-} else {
-    document.write("<h4>Alunos que ficaram de recuperação:</h4>")
-    alunosRecuperacao.forEach(function (aluno) {
-        document.write("<li>Nome: " + aluno.nome + " - Média: " + aluno.media + "</li>");
-    });
-} */
+arr.forEach(function (item) {
+  if (Number(item) > maior) maior = item;
+  if (Number(item) < menor) menor = item;
+});
