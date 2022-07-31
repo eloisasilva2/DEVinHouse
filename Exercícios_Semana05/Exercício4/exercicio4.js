@@ -11,3 +11,5 @@ const numeroPositivos = (array = []) => {
   return newArray
 }
 console.log(numeroPositivos(arrayQualquer))
+
+//estudar
