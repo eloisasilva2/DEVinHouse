@@ -38,14 +38,3 @@ for (let i = 0; i < 4; i++) {
 
 let tagH2 = document.getElementById("h2");
 tagH2.innerHTML += nomeAntigo;
-
-
-
-
-var maior = Number.NEGATIVE_INFINITY,
-  menor = Infinity;
-
-arr.forEach(function (item) {
-  if (Number(item) > maior) maior = item;
-  if (Number(item) < menor) menor = item;
-});

@@ -1,15 +1,12 @@
 //Crie uma arrow function que recebe um array de números e calcula a média deles
 
-let calcularMedia = (array) => {
-    let media =
-      array.reduce((acc, curr) => {
-        acc += curr;
-        return acc;
-      }, 0) / array.length;
-    return media;  
-  };
-  
-  console.log(calcularMedia([10, 2, 2, 2]));
-//!!!! estudar reduce
 
-  
+let array = [10, 15, 25, 30, 45], total = 0, media = 0;
+
+let somar = array.forEach((item) => {
+  total += item;
+  media = total / array.length;
+})
+
+console.log(media)
+
