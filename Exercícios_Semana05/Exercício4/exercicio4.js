@@ -1,15 +1,13 @@
 //Crie uma arrow function que recebe um array de números  e retorne um array contendo apenas números positivos
 
-var arrayQualquer = [-1, -2, 0, 3, 4, 5, 6, 7, 8, 9]
-const numeroPositivos = (array = []) => {
-  newArray = []
-  for (const item of array) {
+var array= [-1, -2, 0, 3, 4, 5, 6, 7, 8, 10, -10]
+let numerosPositivos = (array) => {
+  arrayPositivos = []
+  for (let item of array) {
     if (item >= 0){
-      newArray.push(item)
+      arrayPositivos.push(item)
     }
   }
-  return newArray
+  return arrayPositivos
 }
-console.log(numeroPositivos(arrayQualquer))
-
-//estudar
+console.log(numerosPositivos(array))

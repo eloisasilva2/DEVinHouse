@@ -53,6 +53,7 @@ textarea {
 }
 
 #card {
+
   flex-direction: column;
   background-color: #ffd27d;
   width: 300px;
