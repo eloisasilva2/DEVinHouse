@@ -1,0 +1,8 @@
+O que são componentes no React?
+
+A principal característica do React é permitir a criação de componentes que podem ser reutilizados em diversas páginas. 
+Os componentes são blocos de códigos reutilizáveis que agregam funcionalidades e que retornam ao código HTML após a renderização pelo navegador.
+Componentes React são como funções JavaScript, eles aceitam entradas como propriedades (chamadas “props”) e retornam novos elementos React, os chamados JSX.
+É normal encontrar vários tipos de componentes em uma aplicação, dentre os mais usados: componente de classe e componente funcional sem estado.
+O componente de classe possuem um alto nível de poder dentro da aplicação, pois além gerenciar o próprio estado, herdam os chamados métodos de ciclo de vida do React, lidam com partes lógicas da aplicação e manipulam eventos através de métodos que podem ser invocados em qualquer lugar do componente ou em seus filhos.
+Já o componente funcional sem estado pode ser representado por funções JavaScript e não se preocupam com o gerenciamento de estado do componente, mas apenas com a apresentação dos dados na aplicação.
