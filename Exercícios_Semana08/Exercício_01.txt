@@ -1,0 +1,3 @@
+O React é uma biblioteca JavaScript (um compilado de códigos JavaScript pré-escrito), de código aberto e o seu foco é criar interfaces de usuário em páginas web.
+Facilita muito a construção de interfaces visuais complexas. Ele é baseado em componentes, o que permite o reaproveitamento de código e facilita a manutenção.
+A sintaxe do React utiliza o conceito de JSX (JavaScript Syntax Extension), mas, ele é basicamente uma mistura de JavaScript com HTML, fornecendo uma estrutura similar ao XML. 
