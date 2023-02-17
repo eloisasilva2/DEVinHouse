@@ -1,0 +1,40 @@
+name: DEVinHouse
+on:
+  workflow_dispatch:  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, Word 
+
+  deploy-deselvolvimento:
+   runs-on: ubuntu-latest
+   environment:
+     name: Desenvolvimento
+     url: 'uol.com.br'
+   needs: build
+   steps:
+    - name: Run a one-line script
+      run: echo deploy Desenvolvimento
+  
+  deploy-homologacao:
+   runs-on: ubuntu-latest
+   environment:
+     name: HOMOL
+     url: 'uol.com.br'
+   needs: deploy-dev
+   steps:
+    - name: Run a one-line script
+      run: echo deploy Homologacao
+  
+  deploy-producao:
+   runs-on: ubuntu-latest
+   environment:
+     name: PRD
+     url: 'uol.com.br'
+   needs: deploy-producao
+   steps:
+    - name: Run a one-line script
+      run: echo deploy Producao
