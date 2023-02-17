@@ -18,23 +18,23 @@ jobs:
    steps:
     - name: Run a one-line script
       run: echo deploy Desenvolvimento
-  
+
   deploy-homologacao:
    runs-on: ubuntu-latest
    environment:
      name: HOMOL
      url: 'uol.com.br'
-   needs: deploy-dev
+   needs: build
    steps:
     - name: Run a one-line script
       run: echo deploy Homologacao
+
   
   deploy-producao:
    runs-on: ubuntu-latest
    environment:
      name: PRD
-     url: 'uol.com.br'
-   needs: deploy-producao
+   needs: build
    steps:
     - name: Run a one-line script
       run: echo deploy Producao
